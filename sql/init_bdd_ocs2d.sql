@@ -1,4 +1,5 @@
 
+
 -- ################################################################# Domaine valeur - lt_ocs2d_cs  ###############################################
 
 -- Table: r_ocs2d_test.lt_ocs2d_cs
@@ -76,4 +77,101 @@ INSERT INTO r_ocs2d_test.lt_ocs2d_cs(
     ('CS6.6.0','Autres Formations herbacées'); 
     
  
+
+
+-- ################################################################# Domaine valeur - lt_ocs2d_us  ###############################################
+
+-- Table: r_ocs2d_test.lt_ocs2d_us
+
+-- DROP TABLE r_ocs2d_test.lt_ocs2d_us;
+
+CREATE TABLE r_ocs2d_test.lt_ocs2d_us
+(
+  code character varying(7) NOT NULL,
+  valeur character varying(254) NOT NULL,
+  CONSTRAINT lt_ocs2d_us_pkey PRIMARY KEY (code)
+)
+WITH (
+  OIDS=FALSE
+);
+
+COMMENT ON TABLE r_ocs2d_test.lt_ocs2d_us
+  IS 'Code permettant de décrire le type d''usage du sol';
+COMMENT ON COLUMN r_ocs2d_test.lt_ocs2d_us.code IS 'Code de la liste énumérée relative au type d''usage du sol';
+COMMENT ON COLUMN r_ocs2d_test.lt_ocs2d_us.valeur IS 'Valeur de la liste énumérée relative au type d''usage du sol';
+
+INSERT INTO r_ocs2d_test.lt_ocs2d_us(
+            code, valeur)
+    VALUES
+    ('US0.0.0','Non renseigné'),
+    ('US1.0.0','Production primaire'),
+    ('US1.1.0','Agriculture'),      
+    ('US1.1.1','Prairies'),
+    ('US1.1.2','Bandes enherbées'),
+    ('US1.1.3','Cultures annuelles'),
+    ('US1.1.4','Horticulture'),
+    ('US1.1.5','Cultures permanentes'),
+    ('US1.1.6','Autoconsommation'),
+    ('US1.1.7','Infrastructures agricoles'),
+    ('US1.2.0','Sylviculture'),
+    ('US1.2.1','Zones de coupes'),   
+    ('US1.2.2','Peupleraies'),
+    ('US1.2.3','Plantations récentes'),
+    ('US1.2.4','A vocation sylvicole ou usage indéterminé'),
+    ('US1.3.0','Activités d''extraction'),
+    ('US1.3.1','Carrières, mines'),
+    ('US1.3.2','Terrils en exploitation'),
+    ('US1.4.0','Aquaculture, pisciculture'),     
+    ('US2.0.0','Activités économiques secondaires et tertiaires'),
+    ('US2.1.0','Zones industrielles et d''activités économiques'),       
+    ('US2.1.1','Zones industrielles et d''activités économiques'), 
+    ('US2.1.2','Zones de stockage gaz et hydrocarbures'),
+    ('US2.2.0','Zones commerciales'),
+    ('US3.0.0','Services et usages collectifs'),           
+    ('US3.1.0','Services publics, administratifs et collectifs'),           
+    ('US3.1.1','Emprises scolaires / universitaires'),           
+    ('US3.1.2','Emprises hospitalières'),           
+    ('US3.1.3','Cimetières et lieux de culte'),           
+    ('US3.1.4','Parkings et places'),           
+    ('US3.1.5','Déchetteries et décharges publiques'),           
+    ('US3.1.6','Autres emprises collectives'),           
+    ('US3.2.0','Loisirs et services culturels'),           
+    ('US3.2.1','Parcs et Espaces verts paysagers'),           
+    ('US3.2.2','Complexes sportifs et terrains de sports'),           
+    ('US3.2.3','Golfs'),           
+    ('US3.2.4','Campings'),           
+    ('US3.2.5','Complexes culturels et de loisirs'),           
+    ('US4.0.0','Réseaux de transports, logistiques et infrastructures'),           
+    ('US4.1.0','Routier'),           
+    ('US4.1.1','Routier principal'),           
+    ('US4.1.2','Routier secondaire'),                     
+    ('US4.2.0','Ferré'), 
+    ('US4.2.1','Ferré principal'), 
+    ('US4.2.2','Ferré secondaire'), 
+    ('US4.3.0','Aérien'), 
+    ('US4.4.0','Fluvial et maritime'), 
+    ('US4.5.0','Espaces associés aux réseaux de transport'), 
+    ('US5.0.0','Habitat'), 
+    ('US5.1.0','Tissu urbain continu'), 
+    ('US5.1.1','Habitat continu fortement compact'), 
+    ('US5.1.2','Habitat continu moyennement compact'), 
+    ('US5.1.3','Habitat continu faiblement compact'), 
+    ('US5.2.0','Tissu urbain discontinu'), 
+    ('US5.2.1','Habitat discontinu fortement compact'), 
+    ('US5.2.2','Habitat discontinu moyennement compact'),
+    ('US5.2.3','Habitat discontinu faiblement compact'),     
+    ('US5.3.0','Ensembles collectifs'),   
+    ('US5.3.1','Grands ensembles collectifs'),   
+    ('US5.3.2','Collectifs'),   
+    ('US5.4.0','Habitat isolé'),   
+    ('US6.0.0','Usages temporaires'), 
+    ('US6.1.0','Zones en mutation'), 
+    ('US6.1.1','Chantiers'), 
+    ('US6.1.2','Extraction de matériaux en mutation'), 
+    ('US6.2.0','Zones délaissées'), 
+    ('US6.2.1','Friches d''activités économiques'), 
+    ('US6.2.2','Délaissés urbains'), 
+    ('US6.2.3','Espaces agricoles non exploités'), 
+    ('US7.0.0','Usages indéterminés'); 
+    
 
